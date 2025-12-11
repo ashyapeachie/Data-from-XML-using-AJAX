@@ -26,3 +26,34 @@ function loadXML() {
 
   xhr.send();
 }
+
+document.getElementById("searchBtn").addEventListener("click", searchCourses);
+
+function searchCourses() {
+  if (!xmlData) return;
+
+  const searchText = document.getElementById("searchInput").value.trim();
+  const category = document.getElementById("categorySelect").value;
+
+  const classes = xmlData.getElementsByTagName("CLASS");
+  const tableBody = document.querySelector("#resultsTable tbody");
+  tableBody.innerHTML = "";
+
+  for (let cls of classes) {
+    let value = cls.getElementsByTagName(category)[0].textContent.trim();
+
+        if (value.includes(searchText)) {
+        const row = document.createElement("tr");
+
+        row.innerHTML = `
+            <td>${cls.getElementsByTagName("DEPT")[0].textContent}</td>
+            <td>${cls.getElementsByTagName("COURSENUMBER")[0].textContent}</td>
+            <td>${cls.getElementsByTagName("COURSETITLE")[0].textContent}</td>
+            <td>${cls.getElementsByTagName("DAYS")[0].textContent}</td>
+            <td>${cls.getElementsByTagName("TIME")[0].textContent}</td>
+            <td>${cls.getElementsByTagName("CAMPUS")[0].textContent}</td>`;
+
+            tableBody.appendChild(row);
+        }
+    }
+  }
