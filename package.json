@@ -1,0 +1,14 @@
+{
+  "name": "final_project_ashyahamer",
+  "version": "1.0.0",
+  "description": "Course Catalog AJAX Project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "author": "Ashya H",
+  "license": "MIT"
+}
