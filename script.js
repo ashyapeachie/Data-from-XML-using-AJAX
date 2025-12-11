@@ -40,7 +40,7 @@ function searchCourses() {
   tableBody.innerHTML = "";
 
   for (let cls of classes) {
-    let value = cls.getElementsByTagName(category)[0].textContent.trim();
+    let value = cls.getElementsByTagName(category)[0].textContent.trim().toLowerCase();
 
         if (value.includes(searchText)) {
         const row = document.createElement("tr");
