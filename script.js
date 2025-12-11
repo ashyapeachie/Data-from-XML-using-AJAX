@@ -32,7 +32,7 @@ document.getElementById("searchBtn").addEventListener("click", searchCourses);
 function searchCourses() {
   if (!xmlData) return;
 
-  const searchText = document.getElementById("searchInput").value.trim();
+  const searchText = document.getElementById("searchInput").value.trim().toLowerCase();
   const category = document.getElementById("categorySelect").value;
 
   const classes = xmlData.getElementsByTagName("CLASS");
