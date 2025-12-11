@@ -8,6 +8,9 @@ let xmlData = null;
 
 window.onload = function () {
   loadXML();
+  const searchBtn = document.getElementById("searchBtn");
+  searchBtn.addEventListener("click", searchCourses);
+  // event listener after DOM elements
 };
 // load XML on the loading page
 
