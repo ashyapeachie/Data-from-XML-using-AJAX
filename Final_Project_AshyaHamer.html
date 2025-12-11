@@ -8,10 +8,40 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>COURSE CATALOG</title>
+        <style></style>
     </head>
 
     <body>
+        <h1>Course Catalog Searech</h1>
+        <input type="text" id="searchInput" placeholder="Please enter search text">
 
+        <select id="categorySelect">
+            <!-- dept -->
+            <option value="courseNumber">Course Number</option>
+            <option value="courseTitle">Course Title</option>
+            <option value="days">Days</option>
+            <!-- <option value="time">Time</option> -->
+            <option value="campus">Campus</option>
+        </select>
+
+        <button id="searchBtn">Search</button>
+        <br><br>
+
+        <table id="resultsTable">
+            <thead>
+                <tr>
+                    <!-- dept -->
+                    <th>Course Number</th>
+                    <th>Course Title</th>
+                    <th>Days</th>
+                    <!-- <th>Time</th> -->
+                    <th>Campus</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <script src="script.js"></script>
     </body>
 </html>
